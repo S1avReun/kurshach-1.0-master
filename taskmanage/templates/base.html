@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-t\ o-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+<header class="header">
+<div class="top-header mb-4">
+    <div class="container">
+            <div class="d-flex">
+                <div class="p-2"><a href="tel:+73432130097">+7 (343)<span>213-00-97</span></a></div>
+                <div class="p-2"><a href="tel:+73432130097">+7 (906)<span>803-86-71</span></a></div>
+                <div class="ml-auto p-2"><span>г. Екатеринбург, улица Суходольская, 161 г. Екатеринбург, улица Турбинная, 41а</span></div>
+                </div>
+            </div>
+    </div>
+
+<div class="body">
+    <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="{% url 'home' %}" ><img src="{% static 'img/logo.svg' %}"></a>
+        <a class="nav-link active" href="#">Доставка бетона</a>
+        <a class="nav-link" href="#">Услуги</a>
+        <a class="nav-link" href="#">Цены</a>
+        <a class="nav-link" href="{% url 'about' %}">О компании</a>
+        <a class="nav-link" href="#">Контакты</a>
+
+        {% block content %}
+        {% endblock %}
+</div>
+</header>
+
+
+          </nav>
+<main>
+
+</main>
+</body>
+
+<style>
+    body {
+    background: #fff;
+    font-size: 14px;
+}
+
+.container {
+    width: 75%;
+    color: gray
+}
+
+.header .top-header {
+    font-size: 12pt;
+    background: #e6e6e6;
+}
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</html>
