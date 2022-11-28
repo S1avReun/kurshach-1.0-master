@@ -3,12 +3,6 @@
 {% block title %}Купить бетон с доставкой по Екатеринбургу и области{% endblock %}
 
 {% block content %}
-{% if user.is_authenticated %}
-    Hello {{ user.username }}
-    <p><a href="{% url 'logout' %}">logout</a></p>
-{% else %}
-<a href="{% url 'login' %}">login</a>
-<a href="{% url 'signup' %}">signup</a>
-{% endif %}
+<a href="{% include 'carusel.html'  %}"></a>
 {% endblock %}
 
