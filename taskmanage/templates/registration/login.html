@@ -6,7 +6,12 @@
 <body class="text-center">
 
 <main class="form-signin">
-  <form>
+
+  {% if from.errors %}
+  <p>{{ from.erorrs.error }}</p>
+  {% endif %}
+
+  <form class="container p-3" method="post">
     {% csrf_token %}
     <h1 class="h3 mb-5 fw-normal">Вход на сайт</h1>
     <div class="form-floating mb-3">
