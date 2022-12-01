@@ -5,34 +5,34 @@
 {% block content %}
 <body class="text-center">
 
-<main class="form-signin">
+<main class="form-signin w-100">
   <form class="container p-3" method="post">
     {% csrf_token %}
     <h1 class="h3 mb-5 fw-normal" >Регистрация</h1>
 
     <div class="form-floating mb-3" >
-      <input type="text" class="form-control" id="id_first_name" name="first_name">
       <label for="id_first_name">Имя</label>
+      <input type="text" class="form-control" id="id_first_name" name="first_name">
     </div>
     <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="id_last_name" name="last_name">
       <label for="id_last_name">Фамилия</label>
+      <input type="text" class="form-control" id="id_last_name" name="last_name">
     </div>
     <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="id_email" name="email">
       <label for="id_email">Email</label>
+      <input type="email" class="form-control" id="id_email" name="email">
     </div>
     <div class="form-floating mb-3">
-      <input type="text" class="form-control bfh-phone" data-format="+7 (ddd) ddd dd-dd" id="id_phone" name="phone">
       <label for="id_phone">Номер телефона</label>
+      <input type="text" class="form-control bfh-phone" data-format="+7 (ddd) ddd dd-dd" id="id_phone" name="phone">
     </div>
     <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="id_adress" name="adress">
       <label for="id_adress">Адрес</label>
+      <input type="text" class="form-control" id="id_adress" name="adress">
     </div>
     <div class="form-floating mb-3">
-      <input type="password" id="id_password1" name="password1" class="form-control">
       <label for="id_password1" class="col-form-label">Пароль</label>
+      <input type="password" id="id_password1" name="password1" class="form-control">
       <div class="col-auto">
         <span id="id_passwordhelp" class="form-text">
           Должно быть 8-20 символов.
@@ -40,29 +40,14 @@
       </div>
     </div>
     <div class="form-floating mb-3">
-      <input type="password" class="form-control" id="id_password2" name="password2">
       <label for="id_password2">Подтвердите пароль</label>
+      <input type="password" class="form-control" id="id_password2" name="password2">
     </div>
 
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Регистрация</button>
+    <button class="w-100 btn btn-lg btn-warning" type="submit">Регистрация</button>
 
   </form>
 </main>
 
 </body>
 {% endblock %}
-
-
-<div class="row g-3 align-items-center">
-  <div class="col-auto">
-    <label for="inputPassword6" class="col-form-label">Пароль</label>
-  </div>
-  <div class="col-auto">
-    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-  </div>
-  <div class="col-auto">
-    <span id="passwordHelpInline" class="form-text">
-      Должно быть 8-20 символов.
-    </span>
-  </div>
-</div>
