@@ -1,7 +1,188 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}О Компании{% endblock %}
 
 {% block content %}
+
+<div class="w-100">
+    <div class="page-titles w-100">
+        <div class="carousel-item active w-100" style="height: 300px;">
+            <img src="{% static 'img/contact.png' %}" class="w-100" alt="Snow" style="height: 300px;">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>О компании</h1>
+                <div class="breadcrumbs">
+                    <a class="text-light" href="{% url 'home' %}">Главная</a> <span> / </span> О компании
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container p-4">
+    <div class="row flex-row d-flex">
+        <div class="col-12 col-lg-5 article-content d-block">
+            <h2 class="title">Наша компания</h2>
+            <p>Группа компаний «СтройТрансБетон» имеет два производственных завода,
+                которые оснащены современным высокотехнологичным оборудованием. Они расположены в разных точках
+                города - поэтому такая логистика создает возможность доставки продуктов круглосуточно и оперативно.
+                Качественная полуавтоматизированная аппаратура и применение проверенного надежного сырья
+                обеспечивает высокое качество изготавливаемой продукции. Мы производим все марки растворов.
+                Технические характеристики нашего бетона превышают ГОСТы, благодаря чему стройматериал может успешно
+                конкурировать с европейской продукцией и на данный момент нашими постоянными клиентами являются: ГК
+                АСТРА, ООО "СМУ 7" (Застройщик Карасьеозерский-2, квартал Рябиновый), ООО "ТехСтрой" (Застройщик
+                микрорайона Академический), ООО "Сити Сервис"(Застройщик малоэтажных поселков), УГМК, ТРЦ Мега,
+                Уралмашзавод и многие другие.</p>
+        </div>
+        <div class="ml-auto col-12 col-lg-6 d-flex" >
+            <div id="carouselExampleControls" class="carousel slide photo" data-ride="carousel" hover="pause" data-interval="2000">
+                <ul class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block" style="width: 540px; height: 400px;" src="{% static '/img/ab1.png/' %}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block" style="width: 540px; height: 400px;" src="{% static '/img/ab2.png/' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row flex-row-reverse d-flex" style="background: #E8E8E8;">
+        <div class="col-12 col-lg-6 article-content d-block">
+            <h3 class="title">Гарантия лучшей цены</h3>
+            <p class="article-description">Отлаженный производственный процесс, наличие 2-ух заводов в черте города и собственный автопарк дают возможность формировать конкурентоспособные цены на нашу продукцию. На данный момент мы предлагаем хорошую цену на куб бетона в Екатеринбурге. Мы не обманываем наших покупателей и дорожим своей репутацией, поэтому, работая с нами, вы получаете честную цену и никогда не столкнетесь с проблемой недогрузки бетона.</p>
+        </div>
+        <div class="ml-auto col-12 col-lg-6 d-flex" >
+            <div id="carouselExampleControls1" class="carousel slide photo" data-ride="carousel" hover="pause" data-interval="2000">
+                <ul class="carousel-indicators ">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block" style="width: 540px; height: 400px;" src="{% static '/img/ab3.png/' %}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block" style="width: 540px; height: 400px;" src="{% static '/img/ab4.png/' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row flex-row d-flex">
+        <div class="col-12 col-lg-5 article-content d-block">
+            <h2 class="title">Испытательная лаборатория</h2>
+            <p>Мы предлагаем только проверенную продукцию. Все марки бетона проходят тщательный контроль качества. Мы тестируем свои растворы на прочность, устойчивость к механическим, химическим и атмосферным факторам. В продажу поступает только тот бетон, который подтвердил заявленное высокое качество.
+                Лаборатория «СтройТрансБетон» оснащена мощным современным оборудованием, которое гарантирует максимальную точность результатов. Мы стремимся создавать лучшую продукцию, поэтому непрерывно совершенствуем и улучшаем свои растворы. Также мы можем разрабатывать собственные рецептуры бетона, например такой, как белый бетон, который мы использовали при заливке амфитеатра в ТЦ «Мега».</p>
+        </div>
+        <div class="ml-auto col-12 col-lg-6 d-flex" >
+            <div id="carouselExampleControls2" class="carousel slide photo" data-ride="carousel" hover="pause" data-interval="2000">
+                <ul class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block" style="width: 540px; height: 400px;" src="{% static '/img/ab5.png/' %}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block" style="width: 540px; height: 400px;" src="{% static '/img/ab6.png/' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row flex-row-reverse d-flex" style="background: #E8E8E8;">
+        <div class="col-12 col-lg-6 article-content d-block">
+            <h3 class="title">Собственный автопарк</h3>
+            <p class="article-description">У нас есть собственный парк автотранспорта с большим количеством транспортных единиц: тонары, цементовозы, автобетоносмесители (20 шт.), автобетононасосы. Благодаря этому вы можете заказать доставку бетона в любом объеме. Выгодное местоположение заводов и автопарка позволяет оперативно выполнять самые срочные заказы. После оформления заказа диспетчер нашей компании точно рассчитает время доставки. Для максимального удобства каждый из клиентов может выбрать оптимально подходящий объем миксера. Мы не только оперативно доставим, но и быстро выгрузим бетон. Мы предлагаем качественный европейский сервис, поэтому доставка осуществляется круглосуточно.</p></div>
+        <div class="ml-auto col-12 col-lg-6 d-flex" >
+            <div id="carouselExampleControls3" class="carousel slide photo" data-ride="carousel" hover="pause" data-interval="2000">
+                <ul class="carousel-indicators ">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block " style="width: 540px; height: 400px;" src="{% static '/img/ab7.png/' %}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block" style="width: 540px; height: 400px;" src="{% static '/img/ab8.png/' %}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block " style="width: 540px; height: 400px;" src="{% static '/img/ab9.png/' %}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block " style="width: 540px; height: 400px;" src="{% static '/img/ab10.png/' %}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block " style="width: 540px; height: 400px;" src="{% static '/img/ab11.png/' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row flex-row d-flex">
+        <div class="col-12 col-lg-5 article-content d-block">
+            <h2 class="title">Бетон от производителя</h2>
+            <p>Мы ориентируемся на опыт европейских производителей и применяем их технологии производства. Налаженный рабочий процесс и применение высокотехнологичного оборудования в двух современных заводах гарантирует высокое качество нашей продукции. Покупая стройматериал от надежного и проверенного производителя, вы приобретаете европейское качество по отечественной цене. Оформить заказ можно онлайн на нашем сайте или по указанному номеру телефона.</p>
+        </div>
+        <div class="ml-auto col-12 col-lg-6 d-flex" >
+            <div id="carouselExampleControls4" class="carousel slide photo" data-ride="carousel" hover="pause" data-interval="2000">
+                <ul class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block " style="width: 540px; height: 400px;" src="{% static '/img/ab12.png/' %}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block" style="width: 540px; height: 400px;" src="{% static '/img/ab13.png/' %}" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block " style="width: 540px; height: 400px;" src="{% static '/img/ab14.png/' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+    .photo{
+    padding: 60px 0px;
+    }
+
+    .article-content{
+    display: flex;
+    padding: 60px 0px;
+    color: black;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 900px;
+    }
+    .carousel-indicators{
+    display: flex;
+    margin: 65px;
+    }
+
+
+</style>
 {% endblock %}
 
