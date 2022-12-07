@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages',
     'users',
+    'crispy_forms',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -132,4 +134,4 @@ LOGOUT_REDIRECT_URL = 'home'
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
-CRIPSY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

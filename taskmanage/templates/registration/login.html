@@ -1,31 +1,19 @@
 {% extends 'base.html' %}
-
-{% block title %}Регистрация{% endblock %}
+{% load crispy_forms_tags %}
+{% block title %}Вход{% endblock %}
 
 {% block content %}
-<body class="text-center">
 
-<main class="form-signin w-100">
-
-
-
-
-  <form class="container p-3" method="post">
+<div class="container p-3">
+  <center>
+  <h2 class=" mb-2 fw-normal">Вход на сайт</h2>
+    </center>
+  <form method="post">
     {% csrf_token %}
-    <h1 class="h3 mb-5 fw-normal">Вход на сайт</h1>
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="id_username" name="username" placeholder="Логин">
-    </div>
-    <div class="form-floating mb-3">
-      <input type="password" class="form-control" id="id_password" name="password" placeholder="Пароль">
-    </div>
-    <button class="w-100 btn btn-lg btn-warning" type="submit">Войти</button>
+    {{ form|crispy }}
+    <center>
+    <button class="btn btn-warning w-50" style="margin-bottom: 50px;" type="sumbit">Войти</button>
+    </center>
   </form>
-</main>
-
-{% if form.errors %}
-        <p class="text-danger">Ваше имя пользователя и/или пароль не совпадают. Пожалуйста, попробуйте еще раз.</p>
-  {% endif %}
-
-</body>
+</div>
 {% endblock %}

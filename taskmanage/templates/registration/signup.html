@@ -1,46 +1,20 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
-{% block title %}Регистрация{% endblock %}
+{% block title %}Изменение пароля{% endblock %}
 
 {% block content %}
-<body class="text-center">
-
-<main class="form-signin w-100">
-  <form class="container p-3" method="post">
+  <div class="container p-3">
+    <center>
+    <h2 class="h3 mb-2 fw-normal">Регистрация</h2>
+    </center>
+  <form method="post">
     {% csrf_token %}
-    <h1 class="h3 mb-5 fw-normal" >Регистрация</h1>
-
-    <div class="form-floating mb-3" >
-      <input type="text" class="form-control" id="id_first_name" name="first_name" placeholder="Имя">
-    </div>
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="id_last_name" name="last_name" placeholder="Фамилия">
-    </div>
-    <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="id_email" name="email" placeholder="email">
-    </div>
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control bfh-phone" data-format="+7 (ddd) ddd dd-dd" id="id_phone" name="phone" placeholder="Номер телефона">
-    </div>
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="id_adress" name="adress" placeholder="Адресс">
-    </div>
-    <div class="form-floating mb-3">
-      <input type="password" id="id_password1" name="password1" class="form-control" placeholder="Пароль">
-      <div class="col-auto">
-        <span id="id_passwordhelp" class="form-text">
-          Должно быть 8-20 символов.
-        </span>
-      </div>
-    </div>
-    <div class="form-floating mb-3">
-      <input type="password" class="form-control" id="id_password2" name="password2" placeholder="Подтвердите пароль">
-    </div>
-
-    <button class="w-100 btn btn-lg btn-warning" type="submit">Регистрация</button>
-
+    {{ form|crispy }}
+    <center>
+    <button class="btn btn-warning w-50" style="margin-bottom: 50px;" type="sumbit" >Регистрация</button>
+    </center>
   </form>
-</main>
+    </div>
 
-</body>
 {% endblock %}
