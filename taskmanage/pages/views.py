@@ -16,7 +16,7 @@ def contactsPageView(request):
 def pricesPageView(request):
     return render(request, 'prices.html')
 
-def productPageView(request):
-    return render(request, 'product.html')
+def productsPageView(request):
+    return render(request, 'products.html')
 
 

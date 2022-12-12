@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Подробнее{% endblock %}
+
+{% block content %}
+<div class="container">
+<div class="product-detail">
+        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static '/img/car2.png/' %}{% endif %}">
+        <h1>{{ product.name }}</h1>
+        <p class="price">{{ product.price }}Руб</p>
+        {% if user.is_authenticated %}
+        <form action="{% url 'cart_add' product.id %}" method="post">
+            {{ cart_product_form }}
+            {% csrf_token %}
+            <input type="submit" value="Add to cart">
+
+        </form>
+        <a href="{% url 'product_edit' product.pk %}">Изменить</a>
+        <a href="#" class="btn btn-danger ml-2" data-toggle="modal" data-target="#exampleModalCenter{{product.pk}}">Удалить</a>
+        {% else %}
+        <p><a href="{% url 'login' %}">Авторизуйтесь</a>, чтобы добавить в корзину</p>
+        {% endif %}
+
+</div>
+</div>
+
+<div class="modal fade" id="exampleModalCenter{{product.pk}}" tabindex="1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Удаление объекта</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="modal-body">
+            Вы действительно хотите удалить этот продукт?
+        </div>
+    </div>
+</div>
+
+{% endblock %}

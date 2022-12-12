@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Корзина{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h2 class="mt-4"> Изменение продукта</h2>
+    <div>
+      <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-warning me-2 m-3" type="submit">Изменить</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

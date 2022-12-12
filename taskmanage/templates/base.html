@@ -26,11 +26,11 @@
 <nav class="navbar navbar-expand-md bg-dark md-4 fixed sticky-top">
 <div class="container">
             <a href="{% url 'home' %}" ><img src="{% static 'img/logo.svg' %}" style="width: 100px; "></a>
-                <a class="nav-link px-2 text-secondary text-light mx-4" href="{% url 'product' %}">Доставка бетона</a>
-                <a class="nav-link px-2 text-secondary text-light mx-4" href="{% url 'services' %}">Услуги</a>
+                <a class="nav-link px-2 text-secondary text-light mx-4" href="{% url 'product_list' %}">Доставка бетона</a>
                 <a class="nav-link px-2 text-secondary text-light mx-4" href="{% url 'prices' %}">Цены</a>
                 <a class="nav-link px-2 text-secondary text-light mx-4" href="{% url 'about' %}">О компании</a>
                 <a class="nav-link px-2 text-secondary text-light mx-4" href="{% url 'contacts' %}">Контакты</a>
+                <a href="{% url 'cart_detail' %}" ><img src="{% static 'img/cart.png' %}" style="width: 40px;"></a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             {% if user.is_authenticated %}
 
@@ -42,7 +42,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="position: absolute; font-size: 14px;">
                                 <a href="{% url 'password_change' %}" class="dropdown-item" >Изменить пароль</a>
-                                <a href="#" class="dropdown-item" >Добавить новый продукт</a>
+                                <a href="{% url 'product_new' %}" class="dropdown-item" >Добавить новый продукт</a>
                                 <hr class="dropdown-divider">
                                 <a href="{% url 'logout' %}" class=" btn-warning dropdown-item" >Выйти</a>
                             </div>

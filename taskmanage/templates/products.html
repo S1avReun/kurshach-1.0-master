@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Продукты{% endblock %}
+
+{% block content %}
+<div id="main" class="product-list">
+<h1>{% if product %}{{ product.name }}Products{% endif %}</h1>
+{% for product in products %}
+    <div class="item">
+        <a href="{% url 'product_detail' product.pk %}">
+            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+        </a>
+        <a  href="{% url 'product_detail' product.pk %}">{{ product.name }}</a><br>
+        {{ product.price }}Руб
+    </div>
+{% endfor %}
+</div>
+{% endblock %}
+
